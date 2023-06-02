@@ -1,0 +1,23 @@
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout/main.html">
+
+    <div class="container" layout:fragment="addItemFragment">
+        <form th:action="@{'/item/add-item'}" method="post">
+            <div class="form-group">
+                <label class="form-label">ITEM-NAME:</label>
+                <input type="text" class="form-control" name="item-name">
+            </div>
+            <div class="form-group">
+                <label class="form-label">ITEM-PRICE:</label>
+                <input type="number" class="form-control" name="item-price">
+            </div>
+            <div class="form-group">
+                <label class="form-label">ITEM-AMOUNT:</label>
+                <input type="number" class="form-control" name="item-amount">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+</html>

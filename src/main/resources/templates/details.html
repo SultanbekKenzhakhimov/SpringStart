@@ -1,0 +1,14 @@
+
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout/main.html">
+
+    <div class="container" layout:fragment="detailsFragment">
+        <div class="row">
+            <form>
+                <input type="text" th:value="${item.getName()}">
+                <input type="number" th:value="${item.getPrice()}">
+                <input type="number" th:value="${item.getAmount()}">
+            </form>
+        </div>
+    </div>
+
+</html>

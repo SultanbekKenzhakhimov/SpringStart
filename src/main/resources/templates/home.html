@@ -1,0 +1,19 @@
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout/main.html">
+
+    <div class="container" layout:fragment="homeFragment">
+        <div class="row">
+            <div class="col-md-3" th:each="item : ${items}">
+                <div class="card">
+                    <h3 class="card-title" th:text="${item.getName()}"></h3>
+                    <div class="card-body">
+                        <h4 class="card-text" th:text="${item.getPrice()}"></h4>
+                        <h4 class="card-text" th:text="${item.getAmount()}"></h4>
+                        <a th:href="@{'/item/details/' + ${item.getId()}}" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</html>
